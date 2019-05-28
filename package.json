@@ -1,0 +1,19 @@
+{
+  "name": "georgievapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "Georgi Georgiev",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express3-handlebars": "^0.5.2",
+    "path": "^0.12.7",
+    "popper.js": "^1.15.0"
+  }
+}
