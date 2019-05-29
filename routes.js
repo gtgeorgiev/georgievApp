@@ -1,21 +1,13 @@
 const express = require('express');
+const fortune = require('./lib/fortune.js');
 const router = express.Router();
-const fortunes = [
-  "Conquer your fears or they will conquer you.",
-  "Rivers need springs.",
-  "Do not fear what you don't know.",
-  "Whenever possible, keep it simple.",
-  "You will have a pleasant surprise.",
-  "Whenever possible, keep it simple.",
-];
 
 router.get('/', (req, res) => {
   res.render('home');
 });
 
 router.get('/about', (req, res) => {
-  const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-  res.render('about', { fortune: randomFortune });
+  res.render('about', { fortune: fortune.getFortune() });
 });
 
 module.exports = router;
